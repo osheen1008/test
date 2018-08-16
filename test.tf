@@ -4,9 +4,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "590451"
+    bucket = "590451-deployer"
     key    = "590451/"
-    region = "us-west-2"
+    region = "us-east-1"
   }
 }
 
