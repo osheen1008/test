@@ -1,1 +1,2 @@
-terraform plan
+echo "applying"
+terraform apply -auto-approve
