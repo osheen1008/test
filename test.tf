@@ -2,6 +2,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "590451"
+    key    = "590451/"
+    region = "us-west-2"
+  }
+}
+
 resource "aws_security_group" "test" {
 	name	= "590451-test"
 	ingress {
