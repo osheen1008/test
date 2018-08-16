@@ -1,14 +1,16 @@
+set type = %1
+echo type
 echo "Deploying infrastructure..."
-if $type == "destroy"
+if %type% == "destroy"
 (
-terraform $type --force
+terraform %type% --force
 )
-elif $type -eq "apply" 
+elif %type% -eq "apply" 
 (
-terraform $type -auto-approve
+terraform %type% -auto-approve
 )
 else
 (
-terraform $type
+terraform %type%
 )
 terraform output
