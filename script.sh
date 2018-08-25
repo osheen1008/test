@@ -1,6 +1,6 @@
 echo $1
 terraform init
-if [ $1 -eq "destroy" ]
+if [ $1 = "destroy" ]
 then
 echo "About to Destroy"
 terraform $1 -force
