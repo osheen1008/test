@@ -1,13 +1,14 @@
 echo "applying"
 terraform init
-if [$1 == 'destroy']
+if [$1 -eq 'destroy']
 then
 echo "About to Destroy"
 terraform $1 -force
-elif [$1 == 'apply']
+elif [$1 -eq 'apply']
 then
 echo "About to apply"
 terraform $1 -auto-approve
 else
-terraform $1
+echo "About to Plan..............................................................."
+terraform plan
 fi
